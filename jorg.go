@@ -11,7 +11,7 @@ import (
 func IndentJSON(byteSlice []byte) error {
 
 	var buffer bytes.Buffer
-	json.Indent(&buffer, byteSlice, "", "   ")
+	json.Indent(&buffer, byteSlice, "", "    ")
 
 	file, err := os.Create("indented.json")
 	if err != nil {
